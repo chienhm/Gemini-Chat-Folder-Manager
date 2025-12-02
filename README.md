@@ -1,6 +1,6 @@
 # Gemini Folder Manager
 
-Một Chrome Extension mạnh mẽ giúp bạn quản lý, phân loại và lưu trữ các cuộc trò chuyện trên Google Gemini vào các thư mục gọn gàng, ngăn nắp.
+Extension giúp bạn quản lý, phân loại và lưu trữ các cuộc trò chuyện trên Google Gemini vào các thư mục gọn gàng, ngăn nắp.
 
 ## 🌟 Tính năng nổi bật
 
