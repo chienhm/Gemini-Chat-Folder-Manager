@@ -26,8 +26,6 @@ Một Chrome Extension mạnh mẽ giúp bạn quản lý, phân loại và lưu
 ### 🛡️ An toàn & Bảo mật
 *   **Dữ liệu cục bộ**: Toàn bộ dữ liệu được lưu trên trình duyệt của bạn (`chrome.storage.local`).
 *   **Không thu thập dữ liệu**: Extension không gửi bất kỳ thông tin nào ra bên ngoài.
-*   **Chống XSS**: Cơ chế bảo mật chặn các link độc hại trong quá trình Import dữ liệu.
-*   **Kiểm tra dữ liệu**: Hệ thống tự động kiểm tra tính hợp lệ của file backup khi khôi phục.
 
 ## 🚀 Hướng dẫn cài đặt
 
