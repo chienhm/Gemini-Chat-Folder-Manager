@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Chat Folder Manager",
+  "version": "1.0",
+  "description": "Tạo folder và lưu các cuộc trò chuyện trên Gemini",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "storage" 
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://gemini.google.com/*"],
+      "css": ["style.css"],
+      "js": ["script.js"]
+    }
+  ]
+}
