@@ -31,13 +31,22 @@ Một Chrome Extension mạnh mẽ giúp bạn quản lý, phân loại và lưu
 
 ## 🚀 Hướng dẫn cài đặt
 
+### Chrome, Edge, Brave (Chromium)
 1.  Tải hoặc Clone source code về máy.
-2.  Mở trình duyệt Chrome (hoặc Edge, Brave...).
-3.  Truy cập địa chỉ: `chrome://extensions/`.
-4.  Bật **Developer mode** (Chế độ dành cho nhà phát triển) ở góc trên bên phải.
-5.  Bấm vào nút **Load unpacked** (Tải tiện ích đã giải nén).
-6.  Chọn thư mục chứa source code (`gemini-folders`).
-7.  Truy cập [gemini.google.com](https://gemini.google.com) để trải nghiệm.
+2.  Mở trình duyệt và truy cập địa chỉ: `chrome://extensions/`.
+3.  Bật **Developer mode** (Chế độ dành cho nhà phát triển) ở góc trên bên phải.
+4.  Bấm vào nút **Load unpacked** (Tải tiện ích đã giải nén).
+5.  Chọn thư mục chứa source code (`gemini-folders`).
+
+### Firefox
+1.  Tải hoặc Clone source code về máy.
+2.  Mở trình duyệt và truy cập địa chỉ: `about:debugging`.
+3.  Chọn mục **This Firefox** ở menu bên trái.
+4.  Bấm vào nút **Load Temporary Add-on...**.
+5.  Tìm đến thư mục source code và chọn file `manifest.json`.
+
+### Sau khi cài đặt
+Truy cập [gemini.google.com](https://gemini.google.com) để trải nghiệm.
 
 ## 📖 Hướng dẫn sử dụng
 
