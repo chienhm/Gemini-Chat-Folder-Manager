@@ -312,6 +312,12 @@ function initFloatingWidget() {
                         }
                     }
 
+                    if (!validateImportUrls(data)) {
+                        showToast("File backup chứa link không hợp lệ! Phải bắt đầu bằng .../app/ hoặc .../share/", "error");
+                        fileInput.value = '';
+                        return;
+                    }
+
                     showConfirm("Hành động này sẽ ghi đè toàn bộ dữ liệu hiện tại. Bạn có chắc không?", () => {
                         try {
                             chrome.storage.local.set({ geminiFolders: data }, () => {
@@ -667,6 +673,11 @@ function saveCurrentChat() {
     }
 
     const url = window.location.href;
+
+    if (!url.startsWith('https://gemini.google.com/app/') && !url.startsWith('https://gemini.google.com/share/')) {
+        showToast("Chỉ được lưu link từ https://gemini.google.com/app/ hoặc /share/", "error");
+        return;
+    }
  
     chrome.storage.local.get(['geminiFolders'], (result) => {
        let data = result.geminiFolders || [];
@@ -695,6 +706,20 @@ function saveCurrentChat() {
            });
        }
     });
+}
+
+function validateImportUrls(nodes) {
+    for (const node of nodes) {
+        if (node.type === 'chat') {
+            if (!node.url || (!node.url.startsWith('https://gemini.google.com/app/') && !node.url.startsWith('https://gemini.google.com/share/'))) {
+                return false;
+            }
+        }
+        if (node.children) {
+            if (!validateImportUrls(node.children)) return false;
+        }
+    }
+    return true;
 }
 
 function getSubtreeDepth(node) {
