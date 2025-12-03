@@ -836,10 +836,10 @@ function handleDragOver(e) {
     targetEl.classList.remove('drag-target-top', 'drag-target-bottom', 'drag-target-inside');
 
     if (targetEl.classList.contains('folder-name')) {
-        // Folder Logic: Top 25% (Before), Bottom 25% (After), Middle 50% (Inside)
-        if (relY < height * 0.25) {
+        // Folder Logic: Top 35% (Before), Bottom 35% (After), Middle 30% (Inside)
+        if (relY < height * 0.35) {
             targetEl.classList.add('drag-target-top');
-        } else if (relY > height * 0.75) {
+        } else if (relY > height * 0.65) {
             targetEl.classList.add('drag-target-bottom');
         } else {
             targetEl.classList.add('drag-target-inside');
@@ -1106,6 +1106,11 @@ function loadData() {
        // -----------------------------
 
        // Top Zone
+       const topZone = document.createElement('div');
+       topZone.className = 'root-drop-zone';
+       topZone.dataset.action = 'root-top';
+       setupZoneEvents(topZone, data);
+       listDiv.appendChild(topZone);
 
        // Render Tree
        function renderTree(nodes, container, currentDepth = 1) {
